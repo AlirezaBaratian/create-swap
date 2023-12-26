@@ -15,7 +15,7 @@ function main() {
 
     # Apply the setting for reboots
     sudo cp /etc/fstab /etc/fstab.bak
-    echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
+    sudo echo '/swapfile none swap sw 0 0' >> /etc/fstab
 
     if [ $? -eq 0 ]; then
         echo "✅ Done."
